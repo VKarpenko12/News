@@ -85,6 +85,7 @@ struct R: Rswift.Validatable {
   }
 
   static func validate() throws {
+    try font.validate()
     try intern.validate()
   }
 
@@ -126,6 +127,245 @@ struct R: Rswift.Validatable {
       return UIKit.UIColor(named: R.color.accentColor.name)
     }
     #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.file` struct is generated, and contains static references to 14 files.
+  struct file {
+    /// Resource file `SF-Display-Black.ttf`.
+    static let sfDisplayBlackTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Black", pathExtension: "ttf")
+    /// Resource file `SF-Display-Bold.ttf`.
+    static let sfDisplayBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Bold", pathExtension: "ttf")
+    /// Resource file `SF-Display-Heavy.ttf`.
+    static let sfDisplayHeavyTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Heavy", pathExtension: "ttf")
+    /// Resource file `SF-Display-Light.ttf`.
+    static let sfDisplayLightTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Light", pathExtension: "ttf")
+    /// Resource file `SF-Display-Medium.ttf`.
+    static let sfDisplayMediumTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Medium", pathExtension: "ttf")
+    /// Resource file `SF-Display-Regular.ttf`.
+    static let sfDisplayRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Regular", pathExtension: "ttf")
+    /// Resource file `SF-Display-Semibold.ttf`.
+    static let sfDisplaySemiboldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Display-Semibold", pathExtension: "ttf")
+    /// Resource file `SF-Text-Bold.ttf`.
+    static let sfTextBoldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-Bold", pathExtension: "ttf")
+    /// Resource file `SF-Text-BoldItalic.ttf`.
+    static let sfTextBoldItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-BoldItalic", pathExtension: "ttf")
+    /// Resource file `SF-Text-Heavy.ttf`.
+    static let sfTextHeavyTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-Heavy", pathExtension: "ttf")
+    /// Resource file `SF-Text-Medium.ttf`.
+    static let sfTextMediumTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-Medium", pathExtension: "ttf")
+    /// Resource file `SF-Text-Regular.ttf`.
+    static let sfTextRegularTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-Regular", pathExtension: "ttf")
+    /// Resource file `SF-Text-RegularItalic.ttf`.
+    static let sfTextRegularItalicTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-RegularItalic", pathExtension: "ttf")
+    /// Resource file `SF-Text-Semibold.ttf`.
+    static let sfTextSemiboldTtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Text-Semibold", pathExtension: "ttf")
+
+    /// `bundle.url(forResource: "SF-Display-Black", withExtension: "ttf")`
+    static func sfDisplayBlackTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayBlackTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Bold", withExtension: "ttf")`
+    static func sfDisplayBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Heavy", withExtension: "ttf")`
+    static func sfDisplayHeavyTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayHeavyTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Light", withExtension: "ttf")`
+    static func sfDisplayLightTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayLightTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Medium", withExtension: "ttf")`
+    static func sfDisplayMediumTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayMediumTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Regular", withExtension: "ttf")`
+    static func sfDisplayRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplayRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Display-Semibold", withExtension: "ttf")`
+    static func sfDisplaySemiboldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfDisplaySemiboldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-Bold", withExtension: "ttf")`
+    static func sfTextBoldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextBoldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-BoldItalic", withExtension: "ttf")`
+    static func sfTextBoldItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextBoldItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-Heavy", withExtension: "ttf")`
+    static func sfTextHeavyTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextHeavyTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-Medium", withExtension: "ttf")`
+    static func sfTextMediumTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextMediumTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-Regular", withExtension: "ttf")`
+    static func sfTextRegularTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextRegularTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-RegularItalic", withExtension: "ttf")`
+    static func sfTextRegularItalicTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextRegularItalicTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "SF-Text-Semibold", withExtension: "ttf")`
+    static func sfTextSemiboldTtf(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.sfTextSemiboldTtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.font` struct is generated, and contains static references to 14 fonts.
+  struct font: Rswift.Validatable {
+    /// Font `SFProText-RegularItalic`.
+    static let sfProTextRegularItalic = Rswift.FontResource(fontName: "SFProText-RegularItalic")
+    /// Font `SFUIDisplay-Black`.
+    static let sfuiDisplayBlack = Rswift.FontResource(fontName: "SFUIDisplay-Black")
+    /// Font `SFUIDisplay-Bold`.
+    static let sfuiDisplayBold = Rswift.FontResource(fontName: "SFUIDisplay-Bold")
+    /// Font `SFUIDisplay-Heavy`.
+    static let sfuiDisplayHeavy = Rswift.FontResource(fontName: "SFUIDisplay-Heavy")
+    /// Font `SFUIDisplay-Light`.
+    static let sfuiDisplayLight = Rswift.FontResource(fontName: "SFUIDisplay-Light")
+    /// Font `SFUIDisplay-Medium`.
+    static let sfuiDisplayMedium = Rswift.FontResource(fontName: "SFUIDisplay-Medium")
+    /// Font `SFUIDisplay-Regular`.
+    static let sfuiDisplayRegular = Rswift.FontResource(fontName: "SFUIDisplay-Regular")
+    /// Font `SFUIDisplay-Semibold`.
+    static let sfuiDisplaySemibold = Rswift.FontResource(fontName: "SFUIDisplay-Semibold")
+    /// Font `SFUIText-BoldItalic`.
+    static let sfuiTextBoldItalic = Rswift.FontResource(fontName: "SFUIText-BoldItalic")
+    /// Font `SFUIText-Bold`.
+    static let sfuiTextBold = Rswift.FontResource(fontName: "SFUIText-Bold")
+    /// Font `SFUIText-Heavy`.
+    static let sfuiTextHeavy = Rswift.FontResource(fontName: "SFUIText-Heavy")
+    /// Font `SFUIText-Medium`.
+    static let sfuiTextMedium = Rswift.FontResource(fontName: "SFUIText-Medium")
+    /// Font `SFUIText-Regular`.
+    static let sfuiTextRegular = Rswift.FontResource(fontName: "SFUIText-Regular")
+    /// Font `SFUIText-Semibold`.
+    static let sfuiTextSemibold = Rswift.FontResource(fontName: "SFUIText-Semibold")
+
+    /// `UIFont(name: "SFProText-RegularItalic", size: ...)`
+    static func sfProTextRegularItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfProTextRegularItalic, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Black", size: ...)`
+    static func sfuiDisplayBlack(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayBlack, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Bold", size: ...)`
+    static func sfuiDisplayBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayBold, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Heavy", size: ...)`
+    static func sfuiDisplayHeavy(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayHeavy, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Light", size: ...)`
+    static func sfuiDisplayLight(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayLight, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Medium", size: ...)`
+    static func sfuiDisplayMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayMedium, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Regular", size: ...)`
+    static func sfuiDisplayRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplayRegular, size: size)
+    }
+
+    /// `UIFont(name: "SFUIDisplay-Semibold", size: ...)`
+    static func sfuiDisplaySemibold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiDisplaySemibold, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-Bold", size: ...)`
+    static func sfuiTextBold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextBold, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-BoldItalic", size: ...)`
+    static func sfuiTextBoldItalic(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextBoldItalic, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-Heavy", size: ...)`
+    static func sfuiTextHeavy(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextHeavy, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-Medium", size: ...)`
+    static func sfuiTextMedium(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextMedium, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-Regular", size: ...)`
+    static func sfuiTextRegular(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextRegular, size: size)
+    }
+
+    /// `UIFont(name: "SFUIText-Semibold", size: ...)`
+    static func sfuiTextSemibold(size: CGFloat) -> UIKit.UIFont? {
+      return UIKit.UIFont(resource: sfuiTextSemibold, size: size)
+    }
+
+    static func validate() throws {
+      if R.font.sfProTextRegularItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFProText-RegularItalic' could not be loaded, is 'SF-Text-RegularItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayBlack(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Black' could not be loaded, is 'SF-Display-Black.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Bold' could not be loaded, is 'SF-Display-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayHeavy(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Heavy' could not be loaded, is 'SF-Display-Heavy.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayLight(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Light' could not be loaded, is 'SF-Display-Light.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Medium' could not be loaded, is 'SF-Display-Medium.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplayRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Regular' could not be loaded, is 'SF-Display-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiDisplaySemibold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIDisplay-Semibold' could not be loaded, is 'SF-Display-Semibold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextBold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-Bold' could not be loaded, is 'SF-Text-Bold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextBoldItalic(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-BoldItalic' could not be loaded, is 'SF-Text-BoldItalic.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextHeavy(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-Heavy' could not be loaded, is 'SF-Text-Heavy.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextMedium(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-Medium' could not be loaded, is 'SF-Text-Medium.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextRegular(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-Regular' could not be loaded, is 'SF-Text-Regular.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+      if R.font.sfuiTextSemibold(size: 42) == nil { throw Rswift.ValidationError(description:"[R.swift] Font 'SFUIText-Semibold' could not be loaded, is 'SF-Text-Semibold.ttf' added to the UIAppFonts array in this targets Info.plist?") }
+    }
 
     fileprivate init() {}
   }

@@ -16,9 +16,9 @@ enum MainTab: Int {
     var title: String {
         switch self {
             case .current:
-                return "Current"
+                return "Local News"
             case .ather:
-                return "Ather"
+                return "Ather News"
         }
     }
     

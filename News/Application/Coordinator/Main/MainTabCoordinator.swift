@@ -56,7 +56,7 @@ class MainTabCoordinator: Coordinator {
         let coordinator = CurrentCoordinator()
 
         let navigationController = BaseNavigationController()
-//        navigationController.tabBarItem = UITabBarItem(title: nil, image: R.image.deselectHomeTabIcon(), selectedImage: R.image.homeTabIcon())
+        navigationController.tabBarItem = UITabBarItem(title: MainTab.current.title, image: R.image.current(), selectedImage: R.image.currentSelectedIcon())
         coordinator.navigationController = navigationController
         
         coordinator.start(animated: true)
@@ -68,7 +68,7 @@ class MainTabCoordinator: Coordinator {
         let coordinator = CurrentCoordinator()
 
         let navigationController = BaseNavigationController()
-//        navigationController.tabBarItem = UITabBarItem(title: nil, image: R.image.deselectChatTabIcon(), selectedImage: R.image.chatTabIcon())
+        navigationController.tabBarItem = UITabBarItem(title: MainTab.ather.title, image: R.image.ather(), selectedImage: R.image.atherSelectedIcon())
         coordinator.navigationController = navigationController
         
         coordinator.start(animated: true)

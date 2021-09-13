@@ -27,8 +27,8 @@ final class NewsDetailViewController: BaseViewController {
     private var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
         $0.textColor = .black
-        $0.numberOfLines = 3
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.numberOfLines = 0
+        $0.font = Font.sfTextMedium(size: 13)
     }
     
     // MARK: - Initialization

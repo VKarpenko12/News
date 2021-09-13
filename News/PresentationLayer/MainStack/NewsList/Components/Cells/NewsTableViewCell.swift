@@ -35,14 +35,14 @@ final class NewsTableViewCell: UITableViewCell {
     private var titleLabel = UILabel().apply {
         $0.textAlignment = .left
         $0.textColor = .black
-        $0.font = UIFont.boldSystemFont(ofSize: 15)
+        $0.font = Font.sfDisplayBold(size: 14)
     }
     
     private var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
         $0.textColor = .lightGray
         $0.numberOfLines = 3
-        $0.font = UIFont.systemFont(ofSize: 14)
+        $0.font = Font.sfTextMedium(size: 13)
     }
 
     // MARK: - Initialization
