@@ -21,12 +21,12 @@ final class NewsDetailViewController: BaseViewController {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 10
         $0.contentMode = .scaleAspectFill
-        $0.backgroundColor = .lightGray
+        $0.backgroundColor = Color.systemLightGray
     }
     
     private var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
-        $0.textColor = .black
+        $0.textColor = Color.black
         $0.numberOfLines = 0
         $0.font = Font.sfTextMedium(size: 13)
     }
@@ -55,7 +55,7 @@ final class NewsDetailViewController: BaseViewController {
     // MARK: Configure
     
     private func configure() {
-        view.backgroundColor = .white
+        view.backgroundColor = Color.white
         attachCoverImageView()
         attachDescriptionLabel()
         

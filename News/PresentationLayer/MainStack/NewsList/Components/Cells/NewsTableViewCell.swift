@@ -22,25 +22,25 @@ final class NewsTableViewCell: UITableViewCell {
     // MARK: Views
     
     private(set) var containerView = UIView().apply {
-        $0.backgroundColor = .clear
+        $0.backgroundColor = Color.clear
     }
     
     private var coverImageView = UIImageView().apply {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 10
         $0.contentMode = .scaleAspectFill
-        $0.backgroundColor = .lightGray
+        $0.backgroundColor = Color.systemLightGray
     }
 
     private var titleLabel = UILabel().apply {
         $0.textAlignment = .left
-        $0.textColor = .black
+        $0.textColor = Color.black
         $0.font = Font.sfDisplayBold(size: 14)
     }
     
     private var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
-        $0.textColor = .lightGray
+        $0.textColor = Color.systemLightGray
         $0.numberOfLines = 3
         $0.font = Font.sfTextMedium(size: 13)
     }
@@ -73,7 +73,7 @@ final class NewsTableViewCell: UITableViewCell {
     // MARK: - Configuration
     
     private func configure() {
-        backgroundColor = .clear
+        backgroundColor = Color.clear
         
         attachContainerView()
         attachCoverImageView()

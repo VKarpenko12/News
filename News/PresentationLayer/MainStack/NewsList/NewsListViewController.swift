@@ -30,7 +30,7 @@ final class NewsListViewController: BaseViewController {
         frame: .zero,
         style: .plain
     ).apply {
-        $0.backgroundColor = .clear
+        $0.backgroundColor = Color.clear
         $0.separatorStyle = .none
         $0.keyboardDismissMode = .onDrag
         $0.contentInset = .init(top: 1, left: 0, bottom: 0, right: 0)
@@ -61,7 +61,7 @@ final class NewsListViewController: BaseViewController {
     // MARK: Configure
     
     private func configure() {
-        view.backgroundColor = .white
+        view.backgroundColor = Color.white
         title = viewModel.getTitle()
         
         condigureViewModle()
