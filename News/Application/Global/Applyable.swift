@@ -10,6 +10,7 @@ import Foundation
 protocol Appliable {}
 
 extension Appliable {
+    
     // MARK: - Appearance
 
     @discardableResult

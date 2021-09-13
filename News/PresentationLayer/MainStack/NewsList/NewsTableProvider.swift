@@ -21,7 +21,6 @@ final class NewsTableProvider: TableViewProvider<
 
     var didTap: DidTap?
     
-    
     // MARK: - Configuration
     
     override func configureTableView() {
@@ -32,7 +31,6 @@ final class NewsTableProvider: TableViewProvider<
     
         super.configureTableView()
     }
-    
     
     // MARK: - UITableViewDataSource
     
@@ -70,7 +68,6 @@ final class NewsTableProvider: TableViewProvider<
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         didTap?(viewModel.item(at: indexPath.row).news)
     }
-    
     
     // MARK: - UITableViewDelegate
     
