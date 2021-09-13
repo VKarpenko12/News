@@ -14,6 +14,9 @@ PODS:
     - Moya (~> 14.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
@@ -21,6 +24,7 @@ DEPENDENCIES:
   - Kingfisher
   - Moya
   - Moya-ModelMapper
+  - R.swift
   - SnapKit
 
 SPEC REPOS:
@@ -30,6 +34,8 @@ SPEC REPOS:
     - ModelMapper
     - Moya
     - Moya-ModelMapper
+    - R.swift
+    - R.swift.Library
     - SnapKit
 
 EXTERNAL SOURCES:
@@ -48,8 +54,10 @@ SPEC CHECKSUMS:
   ModelMapper: 0f68dd4300d0e27290c70f66492c7f795da21bcf
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Moya-ModelMapper: e3a478500921e7299804dc1ac550f1ebf3228ade
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 4f2bc40a82c01107103fa7b845387562647c8e10
+PODFILE CHECKSUM: 185170c8cda1450012aa3f12afd1fda9c1c4ed35
 
 COCOAPODS: 1.10.1

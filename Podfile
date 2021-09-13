@@ -6,6 +6,10 @@ def api
   pod 'Moya-ModelMapper'
 end
 
+def autogeneration
+  pod 'R.swift'
+end
+
 def ui
   pod 'SnapKit'
   pod 'Kingfisher'
@@ -13,7 +17,7 @@ def ui
 end
 
 target 'News' do
-  
+  autogeneration
   api
   ui
 

@@ -13,6 +13,15 @@ enum MainTab: Int {
     case current
     case ather
     
+    var title: String {
+        switch self {
+            case .current:
+                return "Current"
+            case .ather:
+                return "Ather"
+        }
+    }
+    
     var index: Int {
         rawValue
     }

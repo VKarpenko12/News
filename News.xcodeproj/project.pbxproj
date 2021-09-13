@@ -13,6 +13,7 @@
 		9B562E2D26EF9BB5005B00D7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2C26EF9BB5005B00D7 /* MainTabBarController.swift */; };
 		9B562E2F26EF9D7E005B00D7 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2E26EF9D7E005B00D7 /* MainTabCoordinator.swift */; };
 		9B562E3126EFA0A8005B00D7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E3026EFA0A8005B00D7 /* Article.swift */; };
+		9B562E3626EFDEED005B00D7 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E3526EFDEEC005B00D7 /* R.generated.swift */; };
 		9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE620C26D4031B00876C80 /* AppDelegate.swift */; };
 		9BDE621726D4031B00876C80 /* News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE621526D4031B00876C80 /* News.xcdatamodeld */; };
 		9BDE621926D4031E00876C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDE621826D4031E00876C80 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		9B562E2C26EF9BB5005B00D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		9B562E2E26EF9D7E005B00D7 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
 		9B562E3026EFA0A8005B00D7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		9B562E3526EFDEEC005B00D7 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		9BDE620926D4031B00876C80 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDE620C26D4031B00876C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BDE621626D4031B00876C80 /* News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News.xcdatamodel; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		9B562E3326EFDDF7005B00D7 /* Autogeneration */ = {
+			isa = PBXGroup;
+			children = (
+				9B562E3526EFDEEC005B00D7 /* R.generated.swift */,
+			);
+			path = Autogeneration;
+			sourceTree = "<group>";
+		};
 		9BDE620026D4031B00876C80 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +184,7 @@
 			children = (
 				9BDE622726D403A600876C80 /* Support */,
 				9BDE622826D403D600876C80 /* Resources */,
+				9B562E3326EFDDF7005B00D7 /* Autogeneration */,
 				9BDE622A26D404A500876C80 /* Global */,
 				9BDE622F26D4053400876C80 /* Coordinator */,
 			);
@@ -367,6 +378,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BDE622026D4031E00876C80 /* Build configuration list for PBXNativeTarget "News" */;
 			buildPhases = (
+				9B562E3426EFDE11005B00D7 /* Rswift */,
 				D3D482099575C038595B6086 /* [CP] Check Pods Manifest.lock */,
 				9BDE620526D4031B00876C80 /* Sources */,
 				9BDE620626D4031B00876C80 /* Frameworks */,
@@ -444,6 +456,26 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9B562E3426EFDE11005B00D7 /* Rswift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = Rswift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/News/Application/Autogeneration/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/News/Application/Autogeneration/R.generated.swift\"\n";
+		};
 		D3D482099575C038595B6086 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +520,7 @@
 				9BDE624726D407B700876C80 /* BaseViewController.swift in Sources */,
 				9B562E3126EFA0A8005B00D7 /* Article.swift in Sources */,
 				9BDE623126D4055500876C80 /* Coordinator.swift in Sources */,
+				9B562E3626EFDEED005B00D7 /* R.generated.swift in Sources */,
 				9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */,
 				9BDE625F26D4449F00876C80 /* NetworkService.swift in Sources */,
 				9BDE623F26D4069A00876C80 /* CurrentCoordinator.swift in Sources */,
