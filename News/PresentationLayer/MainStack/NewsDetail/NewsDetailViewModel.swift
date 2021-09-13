@@ -2,7 +2,7 @@
 //  NewsDetailViewModel.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 9/13/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import Foundation

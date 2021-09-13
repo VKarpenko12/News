@@ -2,12 +2,12 @@
 //  MainCoordinator.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import Foundation
 
-class MainCoordinator: Coordinator {
+class CurrentCoordinator: Coordinator {
     
     // MARK: - Properties
     // MARK: Content
@@ -19,7 +19,6 @@ class MainCoordinator: Coordinator {
     var didStart: EmptyClosure?
     var didFinish: EmptyClosure?
     
-    
     // MARK: - Initialization
     
     init(
@@ -28,11 +27,14 @@ class MainCoordinator: Coordinator {
         self.navigationController = navigationController
     }
     
-    
     // MARK: - Coordinator
     
     func start(animated: Bool) {
         let newsListVC = NewsListViewController()
+        
+        newsListVC.didSelectNews = { [unowned self] news in
+            self.showNewsDetailViewController(news)
+        }
         
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.setViewControllers([newsListVC], animated: true)
@@ -41,7 +43,6 @@ class MainCoordinator: Coordinator {
     func stop() {
         navigationController.removeFromParent()
     }
-    
     
     // MARK: - ViewControllers
 

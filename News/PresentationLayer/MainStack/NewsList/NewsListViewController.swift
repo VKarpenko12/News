@@ -2,7 +2,7 @@
 //  NewsListViewController.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import UIKit
@@ -33,6 +33,7 @@ final class NewsListViewController: BaseViewController {
         $0.backgroundColor = .clear
         $0.separatorStyle = .none
         $0.keyboardDismissMode = .onDrag
+        $0.contentInset = .init(top: 1, left: 0, bottom: 0, right: 0)
     }
     
     // MARK: Provider
@@ -41,8 +42,8 @@ final class NewsListViewController: BaseViewController {
         tableView: tableView,
         viewModel: viewModel
     ).apply {
-        $0.didTap = {
-            
+        $0.didTap = { [unowned self] news in
+            self.didSelectNews?(news)
         }
     }
     

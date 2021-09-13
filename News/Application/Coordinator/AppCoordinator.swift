@@ -2,7 +2,7 @@
 //  AppCoordinator.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import Foundation
@@ -10,14 +10,16 @@ import Foundation
 class AppCoordinator: Coordinator {
     
     // MARK: - Properties
+    // MARK: Content
+
+    let viewModel: AppCoordinatorViewModel
+    var navigationController: BaseNavigationController
+    private lazy var mainTabCoordinator = configureMainTabCoordinator()
+    
     // MARK: Callbacks
     
     var didStart: EmptyClosure?
     var didFinish: EmptyClosure?
-    
-    let viewModel: AppCoordinatorViewModel
-    var navigationController: BaseNavigationController
-    
     
     // MARK: - Initialization
 
@@ -31,7 +33,6 @@ class AppCoordinator: Coordinator {
         viewModel.configure()
     }
     
-    
     // MARK: Start
     
     func start(animated _: Bool) {
@@ -39,18 +40,19 @@ class AppCoordinator: Coordinator {
         
         switch type {
             case .main:
-                let mainCoordinator = MainCoordinator()
-                startWithCoordinator(mainCoordinator)
+                startWithCoordinator(mainTabCoordinator)
         }
-        
-        viewModel.window.makeKeyAndVisible()
     }
     
-    func startWithCoordinator(_ coordinator: Coordinator) {
+    private func startWithCoordinator(_ coordinator: Coordinator) {
         viewModel.window.rootViewController = coordinator.navigationController
         coordinator.start(animated: true)
         
         viewModel.window.makeKeyAndVisible()
+    }
+    
+    private func configureMainTabCoordinator() -> MainTabCoordinator {
+        MainTabCoordinator()
     }
     
     // MARK: Stop

@@ -2,12 +2,13 @@
 //  Coordinator.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import Foundation
 
 protocol Coordinator: AnyObject {
+    
     // MARK: - Properties
     // MARK: Content
 
@@ -17,7 +18,6 @@ protocol Coordinator: AnyObject {
 
     var didStart: EmptyClosure? { get set }
     var didFinish: EmptyClosure? { get set }
-
     
     // MARK: - Appearance
 

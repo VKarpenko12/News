@@ -1,20 +1,11 @@
 //
-//  NewsResponse.swift
+//  Articles.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/24/21.
+//  Created by Vitalii Karpenko on 9/13/21.
 //
 
 import Foundation
-
-struct NewsResponse: Decodable {
-    
-    // MARK: - Properties
-    
-    let status: String
-    let totalResults: Int
-    let articles: [Article]
-}
 
 struct Article: Decodable {
     

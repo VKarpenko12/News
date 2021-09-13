@@ -10,6 +10,9 @@
 		9B562E2626EF3C70005B00D7 /* Kingfisher+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2526EF3C70005B00D7 /* Kingfisher+Extension.swift */; };
 		9B562E2926EF430B005B00D7 /* NewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2826EF430B005B00D7 /* NewsDetailViewController.swift */; };
 		9B562E2B26EF4383005B00D7 /* NewsDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2A26EF4383005B00D7 /* NewsDetailViewModel.swift */; };
+		9B562E2D26EF9BB5005B00D7 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2C26EF9BB5005B00D7 /* MainTabBarController.swift */; };
+		9B562E2F26EF9D7E005B00D7 /* MainTabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E2E26EF9D7E005B00D7 /* MainTabCoordinator.swift */; };
+		9B562E3126EFA0A8005B00D7 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E3026EFA0A8005B00D7 /* Article.swift */; };
 		9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE620C26D4031B00876C80 /* AppDelegate.swift */; };
 		9BDE621726D4031B00876C80 /* News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE621526D4031B00876C80 /* News.xcdatamodeld */; };
 		9BDE621926D4031E00876C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDE621826D4031E00876C80 /* Assets.xcassets */; };
@@ -21,7 +24,7 @@
 		9BDE623526D405CD00876C80 /* AppCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE623426D405CD00876C80 /* AppCoordinatorViewModel.swift */; };
 		9BDE623926D4061500876C80 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE623826D4061500876C80 /* AppCoordinator.swift */; };
 		9BDE623C26D4065400876C80 /* BaseFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE623B26D4065400876C80 /* BaseFlowViewModel.swift */; };
-		9BDE623F26D4069A00876C80 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE623E26D4069A00876C80 /* MainCoordinator.swift */; };
+		9BDE623F26D4069A00876C80 /* CurrentCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE623E26D4069A00876C80 /* CurrentCoordinator.swift */; };
 		9BDE624226D406F700876C80 /* NewsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE624126D406F700876C80 /* NewsListViewController.swift */; };
 		9BDE624526D4075400876C80 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE624426D4075400876C80 /* BaseNavigationController.swift */; };
 		9BDE624726D407B700876C80 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE624626D407B700876C80 /* BaseViewController.swift */; };
@@ -42,6 +45,9 @@
 		9B562E2526EF3C70005B00D7 /* Kingfisher+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kingfisher+Extension.swift"; sourceTree = "<group>"; };
 		9B562E2826EF430B005B00D7 /* NewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewController.swift; sourceTree = "<group>"; };
 		9B562E2A26EF4383005B00D7 /* NewsDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailViewModel.swift; sourceTree = "<group>"; };
+		9B562E2C26EF9BB5005B00D7 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9B562E2E26EF9D7E005B00D7 /* MainTabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabCoordinator.swift; sourceTree = "<group>"; };
+		9B562E3026EFA0A8005B00D7 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		9BDE620926D4031B00876C80 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDE620C26D4031B00876C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BDE621626D4031B00876C80 /* News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News.xcdatamodel; sourceTree = "<group>"; };
@@ -55,7 +61,7 @@
 		9BDE623426D405CD00876C80 /* AppCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorViewModel.swift; sourceTree = "<group>"; };
 		9BDE623826D4061500876C80 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		9BDE623B26D4065400876C80 /* BaseFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseFlowViewModel.swift; sourceTree = "<group>"; };
-		9BDE623E26D4069A00876C80 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		9BDE623E26D4069A00876C80 /* CurrentCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentCoordinator.swift; sourceTree = "<group>"; };
 		9BDE624126D406F700876C80 /* NewsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsListViewController.swift; sourceTree = "<group>"; };
 		9BDE624426D4075400876C80 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		9BDE624626D407B700876C80 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +128,15 @@
 				9B562E2A26EF4383005B00D7 /* NewsDetailViewModel.swift */,
 			);
 			path = NewsDetail;
+			sourceTree = "<group>";
+		};
+		9B562E3226EFA0BF005B00D7 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				9BDE626126D446AF00876C80 /* NewsResponse.swift */,
+				9B562E3026EFA0A8005B00D7 /* Article.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		9BDE620026D4031B00876C80 = {
@@ -251,7 +266,8 @@
 		9BDE623D26D4067500876C80 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				9BDE623E26D4069A00876C80 /* MainCoordinator.swift */,
+				9B562E2E26EF9D7E005B00D7 /* MainTabCoordinator.swift */,
+				9BDE623E26D4069A00876C80 /* CurrentCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -296,6 +312,7 @@
 		9BDE625126D43CE100876C80 /* MainStack */ = {
 			isa = PBXGroup;
 			children = (
+				9B562E2C26EF9BB5005B00D7 /* MainTabBarController.swift */,
 				9BDE624026D406E700876C80 /* NewsList */,
 				9B562E2726EF42F1005B00D7 /* NewsDetail */,
 			);
@@ -338,7 +355,7 @@
 		9BDE626026D4468400876C80 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9BDE626126D446AF00876C80 /* NewsResponse.swift */,
+				9B562E3226EFA0BF005B00D7 /* News */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -458,6 +475,7 @@
 			files = (
 				9B562E2B26EF4383005B00D7 /* NewsDetailViewModel.swift in Sources */,
 				9BDE624526D4075400876C80 /* BaseNavigationController.swift in Sources */,
+				9B562E2D26EF9BB5005B00D7 /* MainTabBarController.swift in Sources */,
 				9BDE622E26D404ED00876C80 /* Applyable.swift in Sources */,
 				9BDE624E26D4394100876C80 /* NewsTableViewCell.swift in Sources */,
 				9BDE625726D4409D00876C80 /* TableViewProvider.swift in Sources */,
@@ -466,11 +484,13 @@
 				9BDE625C26D4439C00876C80 /* NewsAPI.swift in Sources */,
 				9BDE622C26D404BA00876C80 /* GlobalClosures.swift in Sources */,
 				9BDE624226D406F700876C80 /* NewsListViewController.swift in Sources */,
+				9B562E2F26EF9D7E005B00D7 /* MainTabCoordinator.swift in Sources */,
 				9BDE624726D407B700876C80 /* BaseViewController.swift in Sources */,
+				9B562E3126EFA0A8005B00D7 /* Article.swift in Sources */,
 				9BDE623126D4055500876C80 /* Coordinator.swift in Sources */,
 				9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */,
 				9BDE625F26D4449F00876C80 /* NetworkService.swift in Sources */,
-				9BDE623F26D4069A00876C80 /* MainCoordinator.swift in Sources */,
+				9BDE623F26D4069A00876C80 /* CurrentCoordinator.swift in Sources */,
 				9B562E2926EF430B005B00D7 /* NewsDetailViewController.swift in Sources */,
 				9BDE626226D446AF00876C80 /* NewsResponse.swift in Sources */,
 				9B562E2626EF3C70005B00D7 /* Kingfisher+Extension.swift in Sources */,

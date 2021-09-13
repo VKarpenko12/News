@@ -2,7 +2,7 @@
 //  NewsTableProvider.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import UIKit
@@ -14,8 +14,7 @@ final class NewsTableProvider: TableViewProvider<
     
     // MARK: - Types
     
-    typealias DidTap = (() -> Void)
-    
+    typealias DidTap = ((Article) -> Void)
     
     // MARK: - Properties
     // MARK: Callbacks
@@ -66,6 +65,10 @@ final class NewsTableProvider: TableViewProvider<
         cell.selectionStyle = .none
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didTap?(viewModel.item(at: indexPath.row).news)
     }
     
     

@@ -2,7 +2,7 @@
 //  NewsTableViewCell.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 8/23/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import UIKit

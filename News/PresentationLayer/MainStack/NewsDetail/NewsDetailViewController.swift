@@ -2,7 +2,7 @@
 //  NewsDetailVieController.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 9/13/21.
+//  Created by Vitalii Karpenko on 9/13/21
 //
 
 import UIKit
@@ -26,7 +26,7 @@ final class NewsDetailViewController: BaseViewController {
     
     private var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
-        $0.textColor = .lightGray
+        $0.textColor = .black
         $0.numberOfLines = 3
         $0.font = UIFont.systemFont(ofSize: 14)
     }
@@ -78,7 +78,7 @@ final class NewsDetailViewController: BaseViewController {
         
         coverImageView.snp.makeConstraints { maker in
             maker.height.equalTo(250)
-            maker.top.equalTo(view.safeAreaLayoutGuide)
+            maker.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             maker.leading.trailing.equalToSuperview().inset(14)
         }
     }
