@@ -68,7 +68,7 @@ class MainTabCoordinator: Coordinator {
         let coordinator = CurrentCoordinator()
 
         let navigationController = BaseNavigationController()
-        navigationController.tabBarItem = UITabBarItem(title: MainTab.ather.title, image: R.image.ather(), selectedImage: R.image.atherSelectedIcon())
+        navigationController.tabBarItem = UITabBarItem(title: MainTab.other.title, image: R.image.other(), selectedImage: R.image.otherSelectedIcon())
         coordinator.navigationController = navigationController
         
         coordinator.start(animated: true)

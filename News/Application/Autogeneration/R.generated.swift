@@ -372,28 +372,14 @@ struct R: Rswift.Validatable {
 
   /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
-    /// Image `atherSelectedIcon`.
-    static let atherSelectedIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "atherSelectedIcon")
-    /// Image `ather`.
-    static let ather = Rswift.ImageResource(bundle: R.hostingBundle, name: "ather")
     /// Image `currentSelectedIcon`.
     static let currentSelectedIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "currentSelectedIcon")
     /// Image `current`.
     static let current = Rswift.ImageResource(bundle: R.hostingBundle, name: "current")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "ather", bundle: ..., traitCollection: ...)`
-    static func ather(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.ather, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "atherSelectedIcon", bundle: ..., traitCollection: ...)`
-    static func atherSelectedIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.atherSelectedIcon, compatibleWith: traitCollection)
-    }
-    #endif
+    /// Image `otherSelectedIcon`.
+    static let otherSelectedIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "otherSelectedIcon")
+    /// Image `other`.
+    static let other = Rswift.ImageResource(bundle: R.hostingBundle, name: "other")
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "current", bundle: ..., traitCollection: ...)`
@@ -406,6 +392,20 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "currentSelectedIcon", bundle: ..., traitCollection: ...)`
     static func currentSelectedIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.currentSelectedIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "other", bundle: ..., traitCollection: ...)`
+    static func other(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.other, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "otherSelectedIcon", bundle: ..., traitCollection: ...)`
+    static func otherSelectedIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.otherSelectedIcon, compatibleWith: traitCollection)
     }
     #endif
 

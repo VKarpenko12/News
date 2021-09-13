@@ -11,14 +11,14 @@ import UIKit
 
 enum MainTab: Int {
     case current
-    case ather
+    case other
     
     var title: String {
         switch self {
             case .current:
                 return "Local News"
-            case .ather:
-                return "Ather News"
+            case .other:
+                return "Other News"
         }
     }
     
