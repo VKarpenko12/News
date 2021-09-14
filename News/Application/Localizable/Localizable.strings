@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  News
+
+  Created by Vitalii Karpenko on 9/14/21.
+  
+*/
+
+// MARK: - MainTab
+
+"mainTab.current.title" = "Local News";
+"mainTab.other.title" = "Other News";
+
+// MARK: - Main
+// MARK: NewsListViewController
+
+"news.title" = "Current News";
+
+// MARK: OtherNewsViewController
+
+"otherNews.title" = "Other news";

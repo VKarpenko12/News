@@ -22,7 +22,6 @@ struct SourceNews: Decodable {
 
 extension SourceNews: DisplayArticle {
     var title: String? { name }
-    var urlToImage: String? { nil }
     var content: String? { category }
 }
 

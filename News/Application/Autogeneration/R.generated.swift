@@ -412,6 +412,77 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.string` struct is generated, and contains static references to 1 localization tables.
+  struct string {
+    /// This `R.string.localizable` struct is generated, and contains static references to 4 localization keys.
+    struct localizable {
+      /// Value: Current News
+      static let newsTitle = Rswift.StringResource(key: "news.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Local News
+      static let mainTabCurrentTitle = Rswift.StringResource(key: "mainTab.current.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Other News
+      static let mainTabOtherTitle = Rswift.StringResource(key: "mainTab.other.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+      /// Value: Other news
+      static let otherNewsTitle = Rswift.StringResource(key: "otherNews.title", tableName: "Localizable", bundle: R.hostingBundle, locales: [], comment: nil)
+
+      /// Value: Current News
+      static func newsTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("news.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "news.title"
+        }
+
+        return NSLocalizedString("news.title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Local News
+      static func mainTabCurrentTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("mainTab.current.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "mainTab.current.title"
+        }
+
+        return NSLocalizedString("mainTab.current.title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Other News
+      static func mainTabOtherTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("mainTab.other.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "mainTab.other.title"
+        }
+
+        return NSLocalizedString("mainTab.other.title", bundle: bundle, comment: "")
+      }
+
+      /// Value: Other news
+      static func otherNewsTitle(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("otherNews.title", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "otherNews.title"
+        }
+
+        return NSLocalizedString("otherNews.title", bundle: bundle, comment: "")
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()

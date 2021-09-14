@@ -17,6 +17,6 @@ final class OtherNewsListViewModel {
     // MARK: - Appearance
     
     func getTitle() -> String {
-        "Other news"
+        localizableString.otherNewsTitle()
     }
 }

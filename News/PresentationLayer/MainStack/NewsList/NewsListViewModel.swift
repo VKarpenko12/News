@@ -23,7 +23,7 @@ final class NewsListViewModel {
     // MARK: - Appearance
     
     func getTitle() -> String {
-        "Current News"
+        localizableString.newsTitle()
     }
     
     func numberOfItems() -> Int {

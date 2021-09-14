@@ -14,6 +14,10 @@ protocol DisplayArticle {
     var content: String? { get }
 }
 
+extension DisplayArticle {
+    var urlToImage: String? { nil }
+}
+
 struct Article: Decodable, DisplayArticle {
     
     // MARK: - Properties

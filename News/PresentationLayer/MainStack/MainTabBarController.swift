@@ -7,26 +7,6 @@
 
 import UIKit
 
-// MARK: - Types
-
-enum MainTab: Int {
-    case current
-    case other
-    
-    var title: String {
-        switch self {
-            case .current:
-                return "Local News"
-            case .other:
-                return "Other News"
-        }
-    }
-    
-    var index: Int {
-        rawValue
-    }
-}
-
 // MARK: - TabBar
 
 final class MainTabBarController: UITabBarController {
