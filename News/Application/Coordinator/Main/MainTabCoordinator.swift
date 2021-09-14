@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTabCoordinator: Coordinator {
+final class MainTabCoordinator: Coordinator {
     
     // MARK: - Properties
     // MARK: Content
@@ -65,7 +65,7 @@ class MainTabCoordinator: Coordinator {
     }
     
     private func configureAnotherCoordinator() -> Coordinator {
-        let coordinator = CurrentCoordinator()
+        let coordinator = OtherCoordinator()
 
         let navigationController = BaseNavigationController()
         navigationController.tabBarItem = UITabBarItem(title: MainTab.other.title, image: R.image.other(), selectedImage: R.image.otherSelectedIcon())

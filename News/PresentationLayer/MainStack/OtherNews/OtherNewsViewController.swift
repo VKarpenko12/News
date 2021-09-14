@@ -19,16 +19,10 @@ final class OtherNewsViewController: BaseViewController {
         
     // MARK: Views
     
-    private(set) lazy var tableView = UITableView(
-        frame: .zero,
-        style: .plain
-    ).apply {
+    private var switchView = NewsTabBarView().apply {
         $0.backgroundColor = Color.clear
-        $0.separatorStyle = .none
-        $0.keyboardDismissMode = .onDrag
-        $0.contentInset = .init(top: 1, left: 0, bottom: 0, right: 0)
     }
-
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -45,7 +39,7 @@ final class OtherNewsViewController: BaseViewController {
         
         condigureViewModle()
         
-        attachTableView()
+        attachSwitchView()
     }
     
     private func condigureViewModle() {
@@ -59,12 +53,13 @@ final class OtherNewsViewController: BaseViewController {
 //        }
     }
     
-    private func attachTableView() {
-        view.addSubview(tableView)
+    private func attachSwitchView() {
+        view.addSubview(switchView)
         
-        tableView.snp.makeConstraints { maker in
-            maker.top.bottom.equalTo(view.safeAreaLayoutGuide)
+        switchView.snp.makeConstraints { maker in
+            maker.top.equalTo(view.layoutMarginsGuide)
             maker.leading.trailing.equalToSuperview()
+            maker.height.equalTo(50)
         }
     }
 }

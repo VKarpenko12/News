@@ -1,13 +1,13 @@
 //
-//  MainCoordinator.swift
+//  OtherCoordinator.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 9/13/21
+//  Created by Vitalii Karpenko on 9/14/21.
 //
 
 import Foundation
 
-final class CurrentCoordinator: Coordinator {
+final class OtherCoordinator: Coordinator {
     
     // MARK: - Properties
     // MARK: Content
@@ -30,11 +30,7 @@ final class CurrentCoordinator: Coordinator {
     // MARK: - Coordinator
     
     func start(animated: Bool) {
-        let newsListVC = NewsListViewController()
-        
-        newsListVC.didSelectNews = { [unowned self] news in
-            self.showNewsDetailViewController(news)
-        }
+        let newsListVC = OtherNewsViewController()
         
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.setViewControllers([newsListVC], animated: true)
@@ -53,4 +49,5 @@ final class CurrentCoordinator: Coordinator {
         navigationController.pushViewController(viewController, animated: true)
     }
 }
+
 

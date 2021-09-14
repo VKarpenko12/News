@@ -45,7 +45,7 @@ final class NewsTabBarView: UIView {
     }
     
     private lazy var selectedLineView = UIView().apply {
-        $0.backgroundColor = Color.primary
+        $0.backgroundColor = Color.black
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 1.5
     }
@@ -62,7 +62,7 @@ final class NewsTabBarView: UIView {
         $0.setTitle(NewsListTabType.sources.title, for: .normal)
         $0.addTarget(self, action: #selector(buttonTouchedUpInside), for: .touchUpInside)
         $0.titleLabel?.font = Font.sfTextSemibold(size: 14)
-        $0.setTitleColor(Color.primary, for: .normal)
+        $0.setTitleColor(Color.systemLightGray, for: .normal)
     }
     
     private lazy var buttonsArray = [
