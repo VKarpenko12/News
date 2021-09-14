@@ -7,15 +7,22 @@
 
 import Foundation
 
-struct Article: Decodable {
+protocol DisplayArticle {
+    var title: String? { get }
+    var description: String? { get }
+    var urlToImage: String? { get }
+    var content: String? { get }
+}
+
+struct Article: Decodable, DisplayArticle {
     
     // MARK: - Properties
     
     let author: String?
-    let title: String?
-    let description: String?
+    var title: String?
+    var description: String?
     let url: String?
-    let urlToImage: String?
+    var urlToImage: String?
     let publishedAt: String?
-    let content: String?
+    var content: String?
 }

@@ -46,7 +46,7 @@ final class CurrentCoordinator: Coordinator {
     
     // MARK: - ViewControllers
 
-    private func showNewsDetailViewController(_ arcticle: Article) {
+    private func showNewsDetailViewController(_ arcticle: DisplayArticle) {
         let viewModel = NewsDetailViewModel(news: arcticle)
         let viewController = NewsDetailViewController(viewModel: viewModel)
         

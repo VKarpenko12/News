@@ -14,7 +14,7 @@ final class NewsTableProvider: TableViewProvider<
     
     // MARK: - Types
     
-    typealias DidTap = ((Article) -> Void)
+    typealias DidTap = ((DisplayArticle) -> Void)
     
     // MARK: - Properties
     // MARK: Callbacks

@@ -1,18 +1,18 @@
 //
-//  NewsDetailViewModel.swift
+//  BaseNewsTableViewCellViewModel.swift
 //  News
 //
-//  Created by Vitalii Karpenko on 9/13/21
+//  Created by Vitalii Karpenko on 9/14/21.
 //
 
 import Foundation
 
-final class NewsDetailViewModel {
+final class BaseNewsTableViewCellViewModel {
     
     // MARK: - Properties
     // MARK: Content
     
-    let news: DisplayArticle
+    var news: DisplayArticle
     
     // MARK: - Initialization
     

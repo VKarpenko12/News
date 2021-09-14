@@ -13,7 +13,7 @@ final class NewsListViewController: BaseViewController {
     // MARK: - Types
     
     typealias Provider = NewsTableProvider
-    typealias DidSelectNews = (Article) -> Void
+    typealias DidSelectNews = (DisplayArticle) -> Void
     
     // MARK: - Properties
     // MARK: Content

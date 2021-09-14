@@ -12,11 +12,11 @@ final class NewsCellViewModel {
     // MARK: - Properties
     // MARK: Content
     
-    var news: Article
+    var news: DisplayArticle
     
     // MARK: - Initialization
     
-    init(news: Article) {
+    init(news: DisplayArticle) {
         self.news = news
     }
     
