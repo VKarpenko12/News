@@ -10,18 +10,34 @@ import IHProgressHUD
 
 final class OtherNewsViewController: BaseViewController {
     
+    // MARK: - Types
+    
+    typealias DidSelect = (DisplayArticle) -> Void
+    
     // MARK: - Properties
     // MARK: Content
     
     private var viewModel = OtherNewsListViewModel()
     
     // MARK: Callbacks
-        
+    
+    var didSelect: DidSelect?
+
     // MARK: Views
     
-    private var switchView = NewsTabBarView().apply {
-        $0.backgroundColor = Color.clear
+    private lazy var switchView = NewsTabBarView().apply {
+        $0.backgroundColor = Color.white
+        $0.didSelectTab = { [unowned self] type in
+            self.changeTab(to: type)
+        }
     }
+    
+    private(set) lazy var everythingNewsViewController = setEverythingNewsViewController()
+    private(set) lazy var sourcesNewsViewController = setSourcesNewsViewController()
+    private(set) lazy var childs = [
+        everythingNewsViewController,
+        sourcesNewsViewController
+    ]
     
     // MARK: - LifeCycle
     
@@ -29,28 +45,15 @@ final class OtherNewsViewController: BaseViewController {
         super.viewDidLoad()
 
         configure()
-        
+        configurateChildViewController(viewController: everythingNewsViewController)
     }
     
     // MARK: Configure
     
     private func configure() {
         view.backgroundColor = Color.white
-        
-        condigureViewModel()
-        
+                
         attachSwitchView()
-    }
-    
-    private func condigureViewModel() {
-//        viewModel.didLoad = { [weak self] in
-//            IHProgressHUD.dismiss()
-//            self?.provider.reloadData()
-//        }
-//        
-//        viewModel.willAppearError = { error in
-//            IHProgressHUD.showError(withStatus: error.localizedDescription )
-//        }
     }
     
     private func attachSwitchView() {
@@ -61,5 +64,66 @@ final class OtherNewsViewController: BaseViewController {
             maker.leading.trailing.equalToSuperview()
             maker.height.equalTo(50)
         }
+    }
+    
+    // MARK: Slide VCs
+    
+    private func setEverythingNewsViewController() -> EverythingNewsViewController {
+        let viewController = EverythingNewsViewController(
+            viewModel: EverythingNewsViewModel()
+        )
+            
+        viewController.didSelect = { [unowned self] news in
+            self.didSelect?(news)
+        }
+        
+        return viewController
+    }
+    
+    private func setSourcesNewsViewController() -> SourcesNewsViewController {
+        let viewController = SourcesNewsViewController(
+            viewModel: SourcesNewsViewModel()
+        )
+        
+        viewController.didSelect = { [unowned self] news in
+            self.didSelect?(news)
+        }
+        
+        return viewController
+    }
+    
+    // MARK: - Actions
+    
+    private func configurateChildViewController(viewController: UIViewController) {
+        addChild(viewController)
+        
+        view.addSubview(viewController.view)
+
+        viewController.view.snp.makeConstraints { maker in
+            maker.top.equalTo(view.layoutMarginsGuide.snp.top).offset(50)
+            maker.leading.trailing.bottom.equalToSuperview()
+        }
+        
+        viewController.didMove(toParent: self)
+    }
+    
+    private func removeChildViewController(asChildViewController viewController: UIViewController) {
+        viewController.willMove(toParent: self)
+        viewController.view.removeFromSuperview()
+        viewController.removeFromParent()
+    }
+    
+    private func changeTab(
+        to type: NewsListTabType
+    ) {
+        let selectedTab = childs[type.rawValue]
+        let deselerctedTab = childs[viewModel.tabType.rawValue]
+        
+        if type != viewModel.tabType {
+            removeChildViewController(asChildViewController: deselerctedTab)
+            configurateChildViewController(viewController: selectedTab)
+        }
+        
+        viewModel.tabType = type
     }
 }

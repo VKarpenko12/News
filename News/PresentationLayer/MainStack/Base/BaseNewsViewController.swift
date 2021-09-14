@@ -25,6 +25,7 @@ class BaseNewsViewController<
             $0.backgroundColor = .clear
         }
         
+        $0.showsVerticalScrollIndicator = false
         $0.separatorStyle = .none
         $0.clipsToBounds = true
     }
@@ -46,10 +47,25 @@ class BaseNewsViewController<
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        condigureViewModel()
+        configure()
+        IHProgressHUD.show()
+        viewModel.getNews()
     }
     
     // MARK: - Configuration
+    
+    private func configure() {
+        condigureViewModel()
+        attachTableView()
+    }
+    
+    private func attachTableView() {
+        view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints { maker in
+            maker.edges.equalTo(view.layoutMarginsGuide)
+        }
+    }
     
     private func condigureViewModel() {
         viewModel.didLoad = { [weak self] in

@@ -30,4 +30,10 @@ final class SourcesNewsViewController: BaseNewsViewController<
             self.didSelect?(news)
         }
     }
+    
+    // MARK: - Configure
+    
+    override func reloadData() {
+        provider.reloadData()
+    }
 }

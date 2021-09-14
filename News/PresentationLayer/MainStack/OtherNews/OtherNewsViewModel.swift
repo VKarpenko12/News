@@ -12,5 +12,5 @@ final class OtherNewsListViewModel {
     // MARK: - Properties
     // MARK: Content
     
-    
+    var tabType: NewsListTabType = .everything
 }
