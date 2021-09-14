@@ -19,7 +19,10 @@ final class NewsListViewController: BaseViewController {
     // MARK: Content
     
     private var viewModel = NewsListViewModel()
-    
+    private let refreshControl = UIRefreshControl().apply {
+        $0.addTarget(self, action: #selector(didPull), for: .valueChanged)
+    }
+
     // MARK: Callbacks
     
     var didSelectNews: DidSelectNews?
@@ -54,6 +57,10 @@ final class NewsListViewController: BaseViewController {
 
         configure()
         
+        reloadData()
+    }
+    
+    private func reloadData() {
         IHProgressHUD.show()
         viewModel.getNews()
     }
@@ -71,6 +78,7 @@ final class NewsListViewController: BaseViewController {
     private func condigureViewModel() {
         viewModel.didLoad = { [weak self] in
             IHProgressHUD.dismiss()
+            self?.refreshControl.endRefreshing()
             self?.provider.reloadData()
         }
         
@@ -86,5 +94,14 @@ final class NewsListViewController: BaseViewController {
             maker.top.bottom.equalTo(view.safeAreaLayoutGuide)
             maker.leading.trailing.equalToSuperview()
         }
+        
+        tableView.addSubview(refreshControl)
+    }
+    
+    // MARK: - Actions
+    
+    @objc
+    func didPull() {
+        reloadData()
     }
 }

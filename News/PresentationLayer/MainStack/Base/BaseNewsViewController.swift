@@ -19,6 +19,10 @@ class BaseNewsViewController<
     
     // MARK: Views
     
+    private let refreshControl = UIRefreshControl().apply {
+        $0.addTarget(self, action: #selector(didPull), for: .valueChanged)
+    }
+    
     private(set) lazy var tableView = UITableView(frame: .zero, style: .plain).apply {
         $0.backgroundColor = .clear
         $0.backgroundView = UIView().apply {
@@ -48,8 +52,7 @@ class BaseNewsViewController<
         super.viewDidLoad()
         
         configure()
-        IHProgressHUD.show()
-        viewModel.getNews()
+        updateData()
     }
     
     // MARK: - Configuration
@@ -65,11 +68,14 @@ class BaseNewsViewController<
         tableView.snp.makeConstraints { maker in
             maker.edges.equalTo(view.layoutMarginsGuide)
         }
+        
+        tableView.addSubview(refreshControl)
     }
     
     private func condigureViewModel() {
         viewModel.didLoad = { [weak self] in
             IHProgressHUD.dismiss()
+            self?.refreshControl.endRefreshing()
             self?.reloadData()
         }
         
@@ -78,5 +84,17 @@ class BaseNewsViewController<
         }
     }
     
+    private func updateData() {
+        IHProgressHUD.show()
+        viewModel.getNews()
+    }
+    
     func reloadData() { }
+    
+    // MARK: - Actions
+    
+    @objc
+    func didPull() {
+        updateData()
+    }
 }
