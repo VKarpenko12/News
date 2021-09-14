@@ -64,12 +64,11 @@ final class NewsListViewController: BaseViewController {
         view.backgroundColor = Color.white
         title = viewModel.getTitle()
         
-        condigureViewModle()
-        
+        condigureViewModel()
         attachTableView()
     }
     
-    private func condigureViewModle() {
+    private func condigureViewModel() {
         viewModel.didLoad = { [weak self] in
             IHProgressHUD.dismiss()
             self?.provider.reloadData()

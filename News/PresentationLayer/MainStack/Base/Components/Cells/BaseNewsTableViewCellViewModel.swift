@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class BaseNewsTableViewCellViewModel {
+class BaseNewsTableViewCellViewModel {
     
     // MARK: - Properties
     // MARK: Content

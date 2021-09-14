@@ -7,13 +7,9 @@
 
 import UIKit
 
-final class BaseNewsTableViewCell: UITableViewCell {
+class BaseNewsTableViewCell: UITableViewCell {
     
     // MARK: - Properties
-    // MARK: Content
-    
-    var viewModel: BaseNewsTableViewCellViewModel?
-    
     // MARK: Callbacks
     
     var didSelect: EmptyClosure?
@@ -24,20 +20,20 @@ final class BaseNewsTableViewCell: UITableViewCell {
         $0.backgroundColor = Color.clear
     }
     
-    private var coverImageView = UIImageView().apply {
+    private(set) var coverImageView = UIImageView().apply {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 10
         $0.contentMode = .scaleAspectFill
         $0.backgroundColor = Color.systemLightGray
     }
 
-    private var titleLabel = UILabel().apply {
+    private(set) var titleLabel = UILabel().apply {
         $0.textAlignment = .left
         $0.textColor = Color.black
         $0.font = Font.sfDisplayBold(size: 14)
     }
     
-    private var descriptionLabel = UILabel().apply {
+    private(set) var descriptionLabel = UILabel().apply {
         $0.textAlignment = .left
         $0.textColor = Color.systemLightGray
         $0.numberOfLines = 3
@@ -71,7 +67,7 @@ final class BaseNewsTableViewCell: UITableViewCell {
     
     // MARK: - Configuration
     
-    private func configure() {
+    func configure() {
         backgroundColor = Color.clear
         
         attachContainerView()
@@ -117,22 +113,5 @@ final class BaseNewsTableViewCell: UITableViewCell {
             maker.leading.equalTo(coverImageView.snp.trailing).inset(-14)
             maker.bottom.equalTo(-14)
         }
-    }
-    
-    // MARK: - Configure viewModel
-    
-    func configure(
-        with viewModel: BaseNewsTableViewCellViewModel
-    ) {
-        self.viewModel = viewModel
-        
-        titleLabel.text = viewModel.getTitle()
-        descriptionLabel.text = viewModel.getDescription()
-        
-        guard let url = viewModel.getCoverImageURL() else { return }
-
-        coverImageView.kf.set(
-            resource: url
-        )
     }
 }

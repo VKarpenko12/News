@@ -37,12 +37,12 @@ final class OtherNewsViewController: BaseViewController {
     private func configure() {
         view.backgroundColor = Color.white
         
-        condigureViewModle()
+        condigureViewModel()
         
         attachSwitchView()
     }
     
-    private func condigureViewModle() {
+    private func condigureViewModel() {
 //        viewModel.didLoad = { [weak self] in
 //            IHProgressHUD.dismiss()
 //            self?.provider.reloadData()

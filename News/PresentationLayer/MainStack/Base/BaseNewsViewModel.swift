@@ -7,16 +7,31 @@
 
 import Foundation
 
-final class BaseNewsViewModel {
+class BaseNewsViewModel {
     
     // MARK: - Properties
     // MARK: Content
     
-    private let networkService = NetworkService()
-    private var items = [NewsCellViewModel]()
+    let networkService = NetworkService()
     
     // MARK: Callback
     
     var didLoad: DidLoad?
     var willAppearError: WillAppearError?
+    
+    // MARK: - Initialization
+    
+    init() {
+        getNews()
+    }
+    
+    // MARK: - Appearance
+    
+    func getTitle() -> String {
+        "Other news"
+    }
+
+    // MARK: Network
+    
+    func getNews() {  }
 }

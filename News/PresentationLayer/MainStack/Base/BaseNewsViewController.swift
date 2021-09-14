@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IHProgressHUD
 
 class BaseNewsViewController<
     ViewModel: BaseNewsViewModel
@@ -15,10 +16,6 @@ class BaseNewsViewController<
     // MARK: Content
     
     let viewModel: ViewModel
-    
-    // MARK: Callbacks
-    
-    var willAppear: EmptyClosure?
     
     // MARK: Views
     
@@ -49,26 +46,21 @@ class BaseNewsViewController<
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadContent()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        willAppear?()
+        condigureViewModel()
     }
     
     // MARK: - Configuration
     
-//    override func configureView() {
-//        super.configureView()
-//        
-//    }
+    private func condigureViewModel() {
+        viewModel.didLoad = { [weak self] in
+            IHProgressHUD.dismiss()
+            self?.reloadData()
+        }
+        
+        viewModel.willAppearError = { error in
+            IHProgressHUD.showError(withStatus: error.localizedDescription )
+        }
+    }
     
-    // MARK: - ViewModel
-    // MARK: Updates
-    
-    func loadContent() { }
-    
-    func reloadContent() { }
+    func reloadData() { }
 }

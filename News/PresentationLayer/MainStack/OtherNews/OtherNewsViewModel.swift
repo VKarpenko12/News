@@ -8,4 +8,9 @@
 import Foundation
 
 final class OtherNewsListViewModel {
+    
+    // MARK: - Properties
+    // MARK: Content
+    
+    
 }
