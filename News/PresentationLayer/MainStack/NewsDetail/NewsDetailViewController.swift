@@ -76,8 +76,10 @@ final class NewsDetailViewController: BaseViewController {
     private func attachCoverImageView() {
         view.addSubview(coverImageView)
         
+        let height = viewModel.getCoverImageURL() == nil ? 0 : 250
+        
         coverImageView.snp.makeConstraints { maker in
-            maker.height.equalTo(250)
+            maker.height.equalTo(height)
             maker.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             maker.leading.trailing.equalToSuperview().inset(14)
         }

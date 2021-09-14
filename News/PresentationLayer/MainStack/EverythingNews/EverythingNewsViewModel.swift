@@ -31,7 +31,7 @@ final class EverythingNewsViewModel: BaseNewsViewModel {
     // MARK: Network
     
     override func getNews() {
-        networkService.getArticles { [weak self] response in
+        networkService.getEverythingNews(topic: "bitcoin") { [weak self] response in
             guard let self = self else { return }
             
             switch response {

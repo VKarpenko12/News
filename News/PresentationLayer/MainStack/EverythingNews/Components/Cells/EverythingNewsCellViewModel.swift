@@ -9,4 +9,9 @@ import Foundation
 
 final class EverythingNewsCellViewModel: BaseNewsTableViewCellViewModel {
     
+    // MARK: - Appearance
+    
+    func getTitle() -> String {
+        news.title ?? ""
+    }
 }

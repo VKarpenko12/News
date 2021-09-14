@@ -31,4 +31,12 @@ class NetworkService: NetworkDataFatcherProtocol {
     func getArticles(completion: @escaping (Result<NewsResponse, Error>) -> Void) {
         request(api: .getNews, completion: completion)
     }
+    
+    func getSorcesNews(completion: @escaping (Result<SourceNewsResponce, Error>) -> Void) {
+        request(api: .getSourcesNews, completion: completion)
+    }
+    
+    func getEverythingNews(topic: String, completion: @escaping (Result<NewsResponse, Error>) -> Void) {
+        request(api: .getEverythingNews(topic: topic), completion: completion)
+    }
 }

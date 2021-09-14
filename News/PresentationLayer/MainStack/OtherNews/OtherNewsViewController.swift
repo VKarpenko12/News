@@ -51,6 +51,8 @@ final class OtherNewsViewController: BaseViewController {
     // MARK: Configure
     
     private func configure() {
+        title = viewModel.getTitle()
+
         view.backgroundColor = Color.white
                 
         attachSwitchView()

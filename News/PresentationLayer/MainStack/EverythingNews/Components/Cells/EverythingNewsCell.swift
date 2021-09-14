@@ -10,14 +10,34 @@ import UIKit
 final class EverythingNewsCell: BaseNewsTableViewCell {
     
     // MARK: - Properties
-    
+    // MARK: Content
+
     var viewModel: EverythingNewsCellViewModel?
     
-    // MARK: - Configuration {
+    // MARK: Views
+    
+    private(set) var titleLabel = UILabel().apply {
+        $0.textAlignment = .left
+        $0.textColor = Color.white
+        $0.font = Font.sfDisplayBold(size: 18)
+    }
+    
+    // MARK: - Configuration 
     
     override func configure() {
         super.configure()
         
+        attachTitleLabel()
+    }
+    
+    private func attachTitleLabel() {
+        containerView.addSubview(titleLabel)
+        
+        titleLabel.snp.makeConstraints { maker in
+            maker.bottom.equalTo(coverImageView.snp.bottom).offset(-10)
+            maker.trailing.equalTo(-25)
+            maker.leading.equalTo(25)
+        }
     }
         
     // MARK: - Configure viewModel
@@ -28,7 +48,6 @@ final class EverythingNewsCell: BaseNewsTableViewCell {
         self.viewModel = viewModel
         
         titleLabel.text = viewModel.getTitle()
-        descriptionLabel.text = viewModel.getDescription()
         
         guard let url = viewModel.getCoverImageURL() else { return }
 

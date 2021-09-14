@@ -22,14 +22,6 @@ class BaseNewsTableViewCellViewModel {
     
     // MARK: - Appearance
     
-    func getTitle() -> String {
-        news.title ?? ""
-    }
-    
-    func getDescription() -> String {
-        news.description ?? news.content ?? " "
-    }
-    
     func getCoverImageURL() -> URL? {
         URL(string: news.urlToImage ?? "")
     }

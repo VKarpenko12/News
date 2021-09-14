@@ -13,4 +13,10 @@ final class OtherNewsListViewModel {
     // MARK: Content
     
     var tabType: NewsListTabType = .everything
+    
+    // MARK: - Appearance
+    
+    func getTitle() -> String {
+        "Other news"
+    }
 }

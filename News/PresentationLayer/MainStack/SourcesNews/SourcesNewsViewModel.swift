@@ -31,16 +31,17 @@ final class SourcesNewsViewModel: BaseNewsViewModel {
     // MARK: Network
     
     override func getNews() {
-        networkService.getArticles { [weak self] response in
+        networkService.getSorcesNews { [weak self] response in
             guard let self = self else { return }
             
             switch response {
                 case .success(let model):
-                    self.items = model.articles.map {
+                    self.items = model.sources.map {
                         SourcesNewsCellViewModel(news: $0)
                     }
                     
                     self.didLoad?()
+                    
                 case .failure(let error):
                     self.willAppearError?(error)
             }

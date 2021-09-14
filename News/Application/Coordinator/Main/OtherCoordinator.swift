@@ -32,6 +32,10 @@ final class OtherCoordinator: Coordinator {
     func start(animated: Bool) {
         let newsListVC = OtherNewsViewController()
         
+        newsListVC.didSelect = { [unowned self] news in
+            self.showNewsDetailViewController(news)
+        }
+        
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.setViewControllers([newsListVC], animated: true)
     }
@@ -42,7 +46,7 @@ final class OtherCoordinator: Coordinator {
     
     // MARK: - ViewControllers
 
-    private func showNewsDetailViewController(_ arcticle: Article) {
+    private func showNewsDetailViewController(_ arcticle: DisplayArticle) {
         let viewModel = NewsDetailViewModel(news: arcticle)
         let viewController = NewsDetailViewController(viewModel: viewModel)
         

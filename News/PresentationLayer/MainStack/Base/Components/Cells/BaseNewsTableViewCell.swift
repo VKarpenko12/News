@@ -20,24 +20,17 @@ class BaseNewsTableViewCell: UITableViewCell {
         $0.backgroundColor = Color.clear
     }
     
+    private var coverView = UIView().apply {
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 10
+        $0.backgroundColor = Color.black.withAlphaComponent(0.5)
+    }
+    
     private(set) var coverImageView = UIImageView().apply {
         $0.clipsToBounds = true
         $0.layer.cornerRadius = 10
         $0.contentMode = .scaleAspectFill
         $0.backgroundColor = Color.systemLightGray
-    }
-
-    private(set) var titleLabel = UILabel().apply {
-        $0.textAlignment = .left
-        $0.textColor = Color.black
-        $0.font = Font.sfDisplayBold(size: 14)
-    }
-    
-    private(set) var descriptionLabel = UILabel().apply {
-        $0.textAlignment = .left
-        $0.textColor = Color.systemLightGray
-        $0.numberOfLines = 3
-        $0.font = Font.sfTextMedium(size: 13)
     }
 
     // MARK: - Initialization
@@ -60,8 +53,6 @@ class BaseNewsTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        titleLabel.text = nil
-        descriptionLabel.text = nil
         coverImageView.image = nil
     }
     
@@ -71,9 +62,6 @@ class BaseNewsTableViewCell: UITableViewCell {
         backgroundColor = Color.clear
         
         attachContainerView()
-        attachCoverImageView()
-        attachTitleLabel()
-        attachDescriptionLabel()
     }
     
     private func attachContainerView() {
@@ -83,35 +71,28 @@ class BaseNewsTableViewCell: UITableViewCell {
             maker.edges.equalToSuperview()
             maker.height.greaterThanOrEqualTo(78)
         }
+        
+        attachCoverImageView()
     }
     
-    private func attachCoverImageView() {
+    func attachCoverImageView() {
         containerView.addSubview(coverImageView)
         
         coverImageView.snp.makeConstraints { maker in
-            maker.leading.top.equalTo(14)
-            maker.height.width.equalTo(50)
+            maker.top.equalTo(7)
+            maker.trailing.leading.equalToSuperview().inset(14)
+            maker.height.equalTo(150)
+            maker.bottom.equalTo(-7)
         }
+        
+        attachBackgrounView()
     }
     
-    private func attachTitleLabel() {
-        containerView.addSubview(titleLabel)
+    private func attachBackgrounView() {
+        coverImageView.addSubview(coverView)
         
-        titleLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(coverImageView.snp.top)
-            maker.trailing.equalTo(-14)
-            maker.leading.equalTo(coverImageView.snp.trailing).inset(-14)
-        }
-    }
-    
-    private func attachDescriptionLabel() {
-        containerView.addSubview(descriptionLabel)
-        
-        descriptionLabel.snp.makeConstraints { maker in
-            maker.top.equalTo(titleLabel.snp.bottom).inset(-3)
-            maker.trailing.equalTo(-14)
-            maker.leading.equalTo(coverImageView.snp.trailing).inset(-14)
-            maker.bottom.equalTo(-14)
+        coverView.snp.makeConstraints { maker in
+            maker.edges.equalToSuperview()
         }
     }
 }

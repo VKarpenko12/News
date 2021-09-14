@@ -16,6 +16,8 @@ let tappiProvider = MoyaProvider<NewsAPI>(plugins: [NetworkLoggerPlugin()])
 
 enum NewsAPI {
     case getNews
+    case getEverythingNews(topic: String)
+    case getSourcesNews
 }
 
 fileprivate let mainURL = "https://newsapi.org"
@@ -27,13 +29,18 @@ extension NewsAPI: TargetType {
         switch self {
             case .getNews:
                 return "/v2/top-headlines"
+                
+            case .getEverythingNews:
+                return "/v2/everything"
+                
+            case .getSourcesNews:
+                return "/v2/top-headlines/sources"
         }
     }
     
     var method: Moya.Method {
-        
         switch self {
-            case .getNews:
+            case .getNews, .getSourcesNews, .getEverythingNews:
                 return .get
         }
     }
@@ -43,10 +50,21 @@ extension NewsAPI: TargetType {
         
         switch self {
             case .getNews:
-            parameters["apikey"] = apiKey
-            parameters["country"] = "us"
+                parameters["apikey"] = apiKey
+                parameters["country"] = "us"
                 
-            return parameters
+                return parameters
+                
+            case .getSourcesNews:
+                parameters["apikey"] = apiKey
+                
+                return parameters
+                
+            case .getEverythingNews(let topic):
+                parameters["apikey"] = apiKey
+                parameters["q"] = topic
+                
+                return parameters
         }
     }
     

@@ -49,6 +49,8 @@
 		9B562E9C26F091DE005B00D7 /* SourcesNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E9B26F091DE005B00D7 /* SourcesNewsCell.swift */; };
 		9B562E9E26F091F7005B00D7 /* SourcesNewsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E9D26F091F7005B00D7 /* SourcesNewsCellViewModel.swift */; };
 		9B562EA026F0922C005B00D7 /* SourceTableProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562E9F26F0922C005B00D7 /* SourceTableProvider.swift */; };
+		9B562EA226F0DB09005B00D7 /* SourceNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562EA126F0DB09005B00D7 /* SourceNews.swift */; };
+		9B562EA426F0DB2D005B00D7 /* SourceNewsResponce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B562EA326F0DB2D005B00D7 /* SourceNewsResponce.swift */; };
 		9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE620C26D4031B00876C80 /* AppDelegate.swift */; };
 		9BDE621726D4031B00876C80 /* News.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9BDE621526D4031B00876C80 /* News.xcdatamodeld */; };
 		9BDE621926D4031E00876C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BDE621826D4031E00876C80 /* Assets.xcassets */; };
@@ -120,6 +122,8 @@
 		9B562E9B26F091DE005B00D7 /* SourcesNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesNewsCell.swift; sourceTree = "<group>"; };
 		9B562E9D26F091F7005B00D7 /* SourcesNewsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourcesNewsCellViewModel.swift; sourceTree = "<group>"; };
 		9B562E9F26F0922C005B00D7 /* SourceTableProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceTableProvider.swift; sourceTree = "<group>"; };
+		9B562EA126F0DB09005B00D7 /* SourceNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceNews.swift; path = News/PresentationLayer/MainStack/SourcesNews/SourceNews.swift; sourceTree = SOURCE_ROOT; };
+		9B562EA326F0DB2D005B00D7 /* SourceNewsResponce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SourceNewsResponce.swift; path = News/PresentationLayer/MainStack/SourcesNews/SourceNewsResponce.swift; sourceTree = SOURCE_ROOT; };
 		9BDE620926D4031B00876C80 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BDE620C26D4031B00876C80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BDE621626D4031B00876C80 /* News.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = News.xcdatamodel; sourceTree = "<group>"; };
@@ -207,7 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				9BDE626126D446AF00876C80 /* NewsResponse.swift */,
+				9B562EA326F0DB2D005B00D7 /* SourceNewsResponce.swift */,
 				9B562E3026EFA0A8005B00D7 /* Article.swift */,
+				9B562EA126F0DB09005B00D7 /* SourceNews.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -385,10 +391,18 @@
 		9B562E9826F091BF005B00D7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				9B562EA526F0E3BB005B00D7 /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		9B562EA526F0E3BB005B00D7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
 				9B562E9B26F091DE005B00D7 /* SourcesNewsCell.swift */,
 				9B562E9D26F091F7005B00D7 /* SourcesNewsCellViewModel.swift */,
 			);
-			path = Components;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		9BDE620026D4031B00876C80 = {
@@ -789,8 +803,10 @@
 				9BDE624226D406F700876C80 /* NewsListViewController.swift in Sources */,
 				9B562E2F26EF9D7E005B00D7 /* MainTabCoordinator.swift in Sources */,
 				9BDE624726D407B700876C80 /* BaseViewController.swift in Sources */,
+				9B562EA426F0DB2D005B00D7 /* SourceNewsResponce.swift in Sources */,
 				9B562E3126EFA0A8005B00D7 /* Article.swift in Sources */,
 				9BDE623126D4055500876C80 /* Coordinator.swift in Sources */,
+				9B562EA226F0DB09005B00D7 /* SourceNews.swift in Sources */,
 				9B562E9E26F091F7005B00D7 /* SourcesNewsCellViewModel.swift in Sources */,
 				9B562E3626EFDEED005B00D7 /* R.generated.swift in Sources */,
 				9BDE620D26D4031B00876C80 /* AppDelegate.swift in Sources */,

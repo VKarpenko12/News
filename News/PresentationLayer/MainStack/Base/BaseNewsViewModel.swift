@@ -19,12 +19,6 @@ class BaseNewsViewModel {
     var didLoad: DidLoad?
     var willAppearError: WillAppearError?
 
-    // MARK: - Appearance
-    
-    func getTitle() -> String {
-        "Other news"
-    }
-
     // MARK: Network
     
     func getNews() {  }
