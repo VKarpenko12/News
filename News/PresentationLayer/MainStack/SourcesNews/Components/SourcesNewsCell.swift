@@ -1,5 +1,5 @@
 //
-//  EverythingNewsCell.swift
+//  SourcesNewsCell.swift
 //  News
 //
 //  Created by Vitalii Karpenko on 9/14/21.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class EverythingNewsCell: BaseNewsTableViewCell {
+final class SourcesNewsCell: BaseNewsTableViewCell {
     
     // MARK: - Properties
     
-    var viewModel: EverythingNewsCellViewModel?
+    var viewModel: SourcesNewsCellViewModel?
     
     // MARK: - Configuration {
     
@@ -23,7 +23,7 @@ final class EverythingNewsCell: BaseNewsTableViewCell {
     // MARK: - Configure viewModel
     
     func configure(
-        with viewModel: EverythingNewsCellViewModel
+        with viewModel: SourcesNewsCellViewModel
     ) {
         self.viewModel = viewModel
         
