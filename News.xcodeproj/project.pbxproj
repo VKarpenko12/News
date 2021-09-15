@@ -493,6 +493,7 @@
 		9BDE622626D4036400876C80 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				9B562EAB26F0EC2C005B00D7 /* Types */,
 				9BDE625A26D4435800876C80 /* Network */,
 				9BDE621526D4031B00876C80 /* News.xcdatamodeld */,
 			);
@@ -529,7 +530,6 @@
 		9BDE622A26D404A500876C80 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				9B562EAB26F0EC2C005B00D7 /* Types */,
 				9BDE622B26D404BA00876C80 /* GlobalClosures.swift */,
 				9BDE622D26D404ED00876C80 /* Applyable.swift */,
 			);

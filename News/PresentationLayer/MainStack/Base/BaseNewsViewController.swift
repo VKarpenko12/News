@@ -9,7 +9,7 @@ import UIKit
 import IHProgressHUD
 
 class BaseNewsViewController<
-    ViewModel: BaseNewsViewModel
+ViewModel: BaseNewsViewModel
 >: UIViewController {
     
     // MARK: - Properties
