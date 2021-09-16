@@ -12,10 +12,18 @@ class BaseNewsViewController<
 ViewModel: BaseNewsViewModel
 >: UIViewController {
     
+    // MARK: - Types
+    
+    typealias DidSelect = (DisplayArticle) -> Void
+    
     // MARK: - Properties
     // MARK: Content
     
     let viewModel: ViewModel
+    
+    // MARK: Callbacks
+    
+    var didSelect: DidSelect?
     
     // MARK: Views
     

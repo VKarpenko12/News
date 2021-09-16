@@ -11,15 +11,7 @@ final class EverythingNewsViewController: BaseNewsViewController<
     EverythingNewsViewModel
 > {
     
-    // MARK: - Types
-    
-    typealias DidSelect = (DisplayArticle) -> Void
-    
     // MARK: - Properties
-    // MARK: Callbacks
-        
-    var didSelect: DidSelect?
-
     // MARK: Provider
     
     private lazy var provider = EverythingNewsTableProvider(
